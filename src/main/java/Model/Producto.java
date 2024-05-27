@@ -4,14 +4,14 @@ public class Producto {
     private int id;
     private String nombre;
     private String descripcion;
-    private float precio;
+    private double precio;
     private int stock;
-    private float descuento;
+    private double descuento;
     private String video;
     private String foto;
 
 
-    public Producto(int id, String nombre, String descripcion, float precio, int stock, float descuento, String video, String foto){
+    public Producto(int id, String nombre, String descripcion, double precio, int stock, double descuento, String video, String foto){
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -24,10 +24,10 @@ public class Producto {
     public int getStock(){
         return stock;
     }
-    public float getPrecio(){
+    public double getPrecio(){
         return precio;
     }
-    public float getDescuento(){
+    public double getDescuento(){
         return descuento;
     }
 

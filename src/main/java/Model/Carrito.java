@@ -6,10 +6,10 @@ public class Carrito {
     private float descuento;
     private float total;
     private Pedido pedido;
-    private Cliente cliente;
+    private Usuario cliente;
     private ArrayList<Producto> productos;
 
-    public Carrito(float descuento, float total,Cliente cliente){
+    public Carrito(float descuento, float total, Usuario cliente){
         this.descuento=descuento;
         this.total=total;
         this.cliente=cliente;
