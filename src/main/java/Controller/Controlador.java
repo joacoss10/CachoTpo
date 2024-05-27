@@ -10,18 +10,20 @@ public class Controlador {
     public void registrarUsuario(int dni,String nombre,String apellido,String direccion,String contraseña){
         Usuario u=new Usuario(dni,nombre,apellido,direccion,contraseña);
         UsuarioService.getService().nuevoUsuario(u);
+        SesionUsuarioService.getService().crearSesion(u);
+        inicioSesionUsuario(dni);
     }
     public void iniciarSesion(int dni,String contraseña){
         Usuario u=null;
         try {
             u=UsuarioService.getService().loggin(dni,contraseña);
+            inicioSesionUsuario(u.getDni());
         }catch (UsuarioExeption e){
             System.out.println(e.getMessage());
         }
-        inicioSesionUsuario(u);
     }
-    private void inicioSesionUsuario(Usuario u){
-        SesionUsuarioService.getService().registrarComienzoSesion(u);
+    private void inicioSesionUsuario(int dni){
+        SesionUsuarioService.getService().registrarComienzoSesion(dni);
     }
     public void cerrarSesion(int dni){
         SesionUsuarioService.getService().registrarFinSesion(dni);

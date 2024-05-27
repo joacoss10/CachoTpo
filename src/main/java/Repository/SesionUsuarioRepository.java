@@ -18,6 +18,8 @@ public class SesionUsuarioRepository {
         sesion.hset(key,"direccion",s.getDireccion());
         sesion.hset(key,"inicioSesion",s.getInicio());
         sesion.hset(key,"finSesion",s.getFin());
+        sesion.hset(key,"cantidadDias",s.getCantidadDia());
+        sesion.hset(key,"cantidadMinutos",s.getMinutosAcumulados());
     }
     public SesionUsuario recuperarSesion(int dni){
         String key="sesionUsuario"+dni;
@@ -28,6 +30,8 @@ public class SesionUsuarioRepository {
         s.setDireccion(sesion.hget(key,"direccion"));
         s.setInicio(sesion.hget(key,"inicioSesion"));
         s.setFin(sesion.hget(key,"finSesion"));
+        s.setMinutosAcumulados(sesion.hget(key,"cantidadMinutos"));
+        s.setCantidadDia(sesion.hget(key,"cantidadDias"));
         return s;
     }
 }

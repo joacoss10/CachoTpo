@@ -7,7 +7,8 @@ public class SesionUsuario {
     private String inicio;
     private String fin;
     private String direccion;
-
+    private String minutosAcumulados;
+    private String cantidadDia;
     public SesionUsuario(){
         this.key=null;
         this.inicio=null;
@@ -19,6 +20,22 @@ public class SesionUsuario {
 
     public String getInicio() {
         return inicio;
+    }
+
+    public String getMinutosAcumulados() {
+        return minutosAcumulados;
+    }
+
+    public String getCantidadDia() {
+        return cantidadDia;
+    }
+
+    public void setCantidadDia(String cantidadDia) {
+        this.cantidadDia = cantidadDia;
+    }
+
+    public void setMinutosAcumulados(String minutosAcumulados) {
+        this.minutosAcumulados = minutosAcumulados;
     }
 
     public String getFin() {

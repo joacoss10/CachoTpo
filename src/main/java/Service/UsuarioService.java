@@ -40,22 +40,15 @@ public class UsuarioService {
         }else return c;
     }
     public void ActualizarCategoria(int dni, SesionUsuario sesion){
-        String inicio= sesion.getInicio();
-        String fin=sesion.getFin();
-        int diferencia=calcularDiferencia(inicio,fin);
-        String categoria;
+        int minutos=Integer.parseInt(sesion.getMinutosAcumulados());
+        int dias=Integer.parseInt(sesion.getCantidadDia());
+        int diferencia=minutos/dias;
+        String categoria=null;
         if(diferencia>240){
-            categoria="top";
-        }else if(diferencia<240 && diferencia>120){
-            categoria="medium";
-        }else categoria=null;
+            categoria="Top";
+        } else if (diferencia<240 && diferencia>120) {
+            categoria="Medium";
+        }else categoria="Low";
         repoCliente.actualizarCategoria(dni,categoria);
-    }
-    private int calcularDiferencia(String fHinicio,String fHfin){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        LocalDateTime inicio = LocalDateTime.parse(fHinicio, formatter);
-        LocalDateTime fin = LocalDateTime.parse(fHfin, formatter);
-        long diferenciaEnMinutos = Duration.between(inicio, fin).toMinutes();
-        return (int)diferenciaEnMinutos;
     }
 }
