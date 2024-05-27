@@ -5,10 +5,15 @@ import redis.clients.jedis.exceptions.JedisException;
 
 public class RedisDBConfig {
     private static final String coneccion="localhost";
-    private static final int puerto=9042;
+    private static final int puerto=6379;
     private static Jedis sesion;
 
     private RedisDBConfig(){}
+    static {
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            cerrarConexion();
+        }));
+    }
     public static Jedis getRedis(){
         if(sesion==null){
             try {
@@ -18,5 +23,10 @@ public class RedisDBConfig {
             }
         }
         return sesion;
+    }
+    private static void cerrarConexion(){
+        if(sesion!=null){
+            sesion.close();
+        }
     }
 }

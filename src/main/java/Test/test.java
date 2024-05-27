@@ -1,20 +1,32 @@
 package Test;
 
-import Model.Producto;
-import Service.CatalogoService;
+import Controller.Controlador;
+import Model.Catalogo;
+
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class test {
     public static void main(String args[]){
-        //Cliente a=new Cliente(1454421,"bruno","viejo","reputo");
-        //ClienteService.getService().nuevoCliente(a);
-        //ClienteService.getService().agregarPedido(1454421,"10");
+        Scanner scan = new Scanner(System.in);
+        //Controlador.getInstancia().registrarUsuario(44655190,"joaquin","morelli","La Boca","aguanteBoca");
+        Controlador.getInstancia().iniciarSesion(44655190,"aguanteBoca");
         /*try {
-            ClienteService.getService().recuperarCliente(1454421).imprimirCLiente();
-        }catch (ClienteExeption e){
-            System.out.println(e.getMessage());
+            TimeUnit.MINUTES.sleep(5);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }*/
-        Producto b=new Producto(01,"Camiseta del cava","Boca",45000,10,0.1,"url","foto");
-        CatalogoService.getService().registrarProducto(b);
+        //Controlador.getInstancia().nuevoCarrito();
+
+        //System.out.println(Controlador.getInstancia().mostrarUsuario());
+        //Controlador.getInstancia().nuevoProducto(01,"Camiseta del cava","Boca",45000,10,"url","foto",0.2);
+        //Controlador.getInstancia().actualizarPrecio(01,2);
+        System.out.println("boca");
+        Controlador.getInstancia().editarDescripcion(01,"facubaja");
+
+        System.out.println("CABJ");
+        Controlador.getInstancia().cerrarSesion();
+        System.out.println("cami");
     }
 }
 

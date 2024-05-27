@@ -12,7 +12,9 @@ public class SesionUsuarioService {
     private static SesionUsuarioService service;
     private static SesionUsuarioRepository repoSesion;
 
-    private SesionUsuarioService(){}
+    private SesionUsuarioService(){
+        repoSesion=new SesionUsuarioRepository();
+    }
     public static SesionUsuarioService getService(){
         if(service==null){
             service=new SesionUsuarioService();
@@ -26,7 +28,7 @@ public class SesionUsuarioService {
     }
     public void registrarFinSesion(int dni){
         SesionUsuario s= repoSesion.recuperarSesion(dni);
-        s.setCantidadDia(calcularDiasEntreFechas(s.getInicio(),s.getFin(),s.getCantidadDia()));
+        s.setCantidadDia(calcularDiasEntreFechas(s.getInicio(),calcularFechaHoraActual(),s.getCantidadDia()));
         s.setFin(calcularFechaHoraActual());
         s.setMinutosAcumulados(calcularDiferencia(s.getInicio(),s.getFin(),s.getMinutosAcumulados()));
         repoSesion.registrarSesion(s);
@@ -36,8 +38,8 @@ public class SesionUsuarioService {
         sesion.setApellido(c.getApellido());
         sesion.setNombre(c.getNombre());
         sesion.setDireccion(c.getDireccion());
-        sesion.setKey("sesioUsuario"+Integer.toString(c.getDni()));
-        sesion.setCantidadDia("0");
+        sesion.setKey("sesionUsuario"+Integer.toString(c.getDni()));
+        sesion.setCantidadDia("1");
         sesion.setMinutosAcumulados("0");
         sesion.setInicio("0");
         sesion.setFin("0");

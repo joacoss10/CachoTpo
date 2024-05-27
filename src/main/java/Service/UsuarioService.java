@@ -35,7 +35,7 @@ public class UsuarioService {
     }
     public Usuario loggin(int dni,String contrasenia) throws UsuarioExeption{
         Usuario c=repoCliente.obtenerUsuario(dni);
-        if(c.getContrasenia().equals(contrasenia)){
+        if(!c.getContrasenia().equals(contrasenia)){
             throw new UsuarioExeption("La contraseña es incorrecta");
         }else return c;
     }

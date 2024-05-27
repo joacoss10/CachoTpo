@@ -27,7 +27,7 @@ public class UsuarioRepository {
                     .append("nombre",usuario.getNombre())
                     .append("apellido", usuario.getApellido())
                     .append("direccion",usuario.getDireccion())
-                    .append("contraseña",usuario.getContrasenia());
+                    .append("contrasenia",usuario.getContrasenia());
             collection.insertOne(doc);
         }catch (MongoException e){
             System.out.println("Error al guardar al Usuario:"+e.getMessage());
@@ -51,7 +51,8 @@ public class UsuarioRepository {
             Document r=collection.find(cli).first();
             Usuario c=null;
             if(r!=null){
-                c=new Usuario(r.getInteger("_id"),r.getString("nombre"),r.getString("apellido"),r.getString("direccion"),r.getString("contraseña"));
+                c=new Usuario(r.getInteger("_id"),r.getString("nombre"),r.getString("apellido"),r.getString("direccion"),r.getString("contrasenia"));
+                c.setCategoria(r.getString("categoria"));
                 if (r.containsKey("pedidos")) {
                     ArrayList<String> pedidosDoc = (ArrayList<String>) r.get("pedidos");
                     c.setPedidos(pedidosDoc);
@@ -64,7 +65,16 @@ public class UsuarioRepository {
         }
     }
     public void actualizarCategoria(int dni,String nuevaCategoria){
-        //escribir el metodo para actualizar la categoria del cliente
-        //ver de que cuando se graba a un cliente nuevo la categoria debria ponerse
+        try {
+            Document query = new Document("_id", dni);
+            Document usuario = collection.find(query).first();
+            if (!usuario.containsKey("categoria")) {
+                collection.updateOne(query, Updates.set("categoria", nuevaCategoria));
+            }
+            collection.updateOne(query, Updates.set("categoria", nuevaCategoria));
+        } catch (MongoException e) {
+            System.out.println("Error al actualizar la categoria: " + e.getMessage());
+        }
     }
 }
+

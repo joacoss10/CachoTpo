@@ -1,5 +1,7 @@
 package Model;
 
+import View.UsuarioView;
+
 import java.util.ArrayList;
 
 
@@ -9,6 +11,7 @@ public class Usuario {
     private String direccion;
     private String apellido;
     private String contrasenia;
+    private String categoria;
     private ArrayList<String> pedidos;
 
     public Usuario(int dni, String nombre, String apellido, String direccion,String contrasenia){
@@ -17,6 +20,7 @@ public class Usuario {
         this.apellido=apellido;
         this.direccion=direccion;
         this.contrasenia=contrasenia;
+        this.categoria=null;
     }
     public int getDni() {
 
@@ -25,6 +29,14 @@ public class Usuario {
     public String getNombre() {
 
         return nombre;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getCategoria() {
+        return categoria;
     }
 
     public String getContrasenia() {
@@ -43,8 +55,8 @@ public class Usuario {
             this.pedidos=Idpedidos;
 
     }
-    public void imprimirCLiente(){
-       // String a=pedidos.get(0);
-        System.out.println(dni+nombre+apellido+direccion);
+    public UsuarioView UsuarioToView(){
+        UsuarioView vista=new UsuarioView(dni,nombre,apellido,categoria,direccion);
+        return vista;
     }
 }
