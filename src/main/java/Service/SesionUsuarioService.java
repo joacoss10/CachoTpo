@@ -28,7 +28,7 @@ public class SesionUsuarioService {
     }
     public void registrarFinSesion(int dni){
         SesionUsuario s= repoSesion.recuperarSesion(dni);
-        s.setCantidadDia(calcularDiasEntreFechas(s.getInicio(),s.getFin(),s.getCantidadDia()));
+        s.setCantidadDia(calcularDiasEntreFechas(s.getInicio(),calcularFechaHoraActual(),s.getCantidadDia()));
         s.setFin(calcularFechaHoraActual());
         s.setMinutosAcumulados(calcularDiferencia(s.getInicio(),s.getFin(),s.getMinutosAcumulados()));
         repoSesion.registrarSesion(s);
