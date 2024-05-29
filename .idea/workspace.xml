@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="836f6f39-5d6f-4eed-85ee-29bf9f25cb1c" name="Changes" comment="Subido">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/ControladorAdmin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/ControladorUsuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Excepciones/CarritoExeption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Excepciones/CatalogoExeption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Repository/CarritoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Repository/IdRepositorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/CarritoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/IdsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/View/UsuarioView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hacer" beforeDir="false" afterPath="$PROJECT_DIR$/src/hacer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Config/CassandraDBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config/CassandraDBConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Config/MongoDBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config/MongoDBConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Config/RedisDBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config/RedisDBConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controlador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Excepciones/UsuarioExeption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Excepciones/UsuarioExeption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Carrito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Carrito.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/EstadoFactura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/EstadoFactura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Factura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/MetodoDePago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/MetodoDePago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Pago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Pago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Catalogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/SesionUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/SesionUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/CatalogoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/CatalogoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/SesionUsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/SesionUsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/CatalogoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/CatalogoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/SesionUsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/SesionUsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/test.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;joacoss10&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/joacoss10/CachoTpo.git&quot;,
+    &quot;accountId&quot;: &quot;c58f97cd-b7d3-4b71-8d7e-8088ea2d9c40&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2h3biPXdifHO5iyC4febSoxJsrp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.test.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Main/Estudios/Actuales/1.IngDeDatos2/TpoGODio/LePonesCachoYAndaIgual",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="836f6f39-5d6f-4eed-85ee-29bf9f25cb1c" name="Changes" comment="" />
+      <created>1716825835722</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716825835722</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Subido">
+      <created>1716826168516</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716826168516</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Subido" />
+    <option name="LAST_COMMIT_MESSAGE" value="Subido" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Service/SesionUsuarioService.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
