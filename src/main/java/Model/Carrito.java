@@ -7,11 +7,9 @@ public class Carrito {
     private float total;
     private Pedido pedido;
     private Usuario cliente;
-    private ArrayList<Producto> productos;
+    private ArrayList<Catalogo> productos;
 
-    public Carrito(float descuento, float total, Usuario cliente){
-        this.descuento=descuento;
-        this.total=total;
+    public Carrito(Usuario cliente){
         this.cliente=cliente;
     }
 

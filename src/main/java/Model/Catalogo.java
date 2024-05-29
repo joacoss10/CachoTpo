@@ -1,6 +1,6 @@
 package Model;
 
-public class Producto {
+public class Catalogo {
     private int id;
     private String nombre;
     private String descripcion;
@@ -10,16 +10,15 @@ public class Producto {
     private String video;
     private String foto;
 
-
-    public Producto(int id, String nombre, String descripcion, double precio, int stock, double descuento, String video, String foto){
+    public Catalogo(int id, String nombre, String descripcion, double precio, int stock, String video, String foto,double descuento){
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
         this.stock = stock;
-        this.descuento = descuento;
         this.video = video;
         this.foto = foto;
+        this.descuento=descuento;
     }
     public int getStock(){
         return stock;
@@ -34,20 +33,19 @@ public class Producto {
     public String getNombre() {
         return nombre;
     }
-
     public int getId() {
         return id;
     }
-
     public String getDescripcion() {
         return descripcion;
     }
-
     public String getFoto() {
         return foto;
     }
-
     public String getVideo() {
         return video;
+    }
+    public void setDescuento(double descuento) {
+        this.descuento = descuento;
     }
 }

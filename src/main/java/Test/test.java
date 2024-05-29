@@ -1,20 +1,35 @@
 package Test;
 
-import Model.Producto;
-import Service.CatalogoService;
+import Controller.ControladorUsuario;
+
+import java.util.concurrent.TimeUnit;
 
 public class test {
     public static void main(String args[]){
-        //Cliente a=new Cliente(1454421,"bruno","viejo","reputo");
-        //ClienteService.getService().nuevoCliente(a);
-        //ClienteService.getService().agregarPedido(1454421,"10");
-        /*try {
-            ClienteService.getService().recuperarCliente(1454421).imprimirCLiente();
-        }catch (ClienteExeption e){
-            System.out.println(e.getMessage());
-        }*/
-        Producto b=new Producto(01,"Camiseta del cava","Boca",45000,10,0.1,"url","foto");
-        CatalogoService.getService().registrarProducto(b);
+        //Controlador.getInstancia().registrarUsuario(44123190,"facu","bianchi","su casa","coca");
+        ControladorUsuario.getInstancia().iniciarSesion(44123190,"coca");
+
+        ControladorUsuario.getInstancia().cerrarSesion();
+
+
+
+
+
+        //crear tabla catalogo en cassandra
+        //crear el primer id en redis de todos los que manejamos nosotros (Catalogo)
+        //***CLAVES REDIS CATALOGO --set
+            //sesionUsuario+dni --hget
+            //Carritos:+dni --l
+            //Carrito:+numeroCarrito
+
     }
+    public static void dormir(){
+        try {
+            TimeUnit.MINUTES.sleep(2);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    //Controlador.getInstancia().nuevoProducto("Camiseta del cava","Boca",45000,10,"url","foto",0.2);
 }
 

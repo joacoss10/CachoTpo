@@ -1,14 +1,38 @@
-1)redis creemos
-2)ni idea
-4)Tenemos que hacer un timestamp, o sea cada operacion del carrito se guarda un snapshot del mismo
+
+
+
 6)Pago ponemos en una coleccion llamada pagos todos los idPedido que se pidieron pagar
 
 -facu-->penta
 
--las config de las bd hacerlas singleton y que se cierre la sesion al terminar de ejecutar
-    -redis
--escribir el metodo para actualizar la categoria del cliente
-         //ver de que cuando se graba a un cliente nuevo la categoria debria ponerse
+-cargarPedido
+-Carrito
+-carrito a pedido
+-pedido a factura
+-registrar pago (solo se pueden pagar de forma secuencial 102,103,104 puede pagar el 102 y 104)
+-lista de pagos
+-setter catalogo
+
+3)Tema carrito
+4)Tenemos que hacer un timestamp, o sea cada operacion del carrito se guarda un snapshot del mismo
+5)carrito a pedido
+6)facturar el pedido y registrar el pago
+7)cargar los pagos y pedidos
+11)historial del catalogo
+
+
+
+a)1000=30%=700
+b)2000=20%=1600
+c)3000=0%=3000
+d)500=0%=500
+ 6500    5800
+
+
+
+
+
+
 
 //SI queremos
 ver como hacer para que cassandra cree el keyspace y la tabla si no existe

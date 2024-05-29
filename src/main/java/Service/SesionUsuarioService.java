@@ -12,7 +12,9 @@ public class SesionUsuarioService {
     private static SesionUsuarioService service;
     private static SesionUsuarioRepository repoSesion;
 
-    private SesionUsuarioService(){}
+    private SesionUsuarioService(){
+        repoSesion=new SesionUsuarioRepository();
+    }
     public static SesionUsuarioService getService(){
         if(service==null){
             service=new SesionUsuarioService();
@@ -36,11 +38,11 @@ public class SesionUsuarioService {
         sesion.setApellido(c.getApellido());
         sesion.setNombre(c.getNombre());
         sesion.setDireccion(c.getDireccion());
-        sesion.setKey("sesioUsuario"+Integer.toString(c.getDni()));
-        sesion.setCantidadDia("0");
+        sesion.setKey("sesionUsuario"+Integer.toString(c.getDni()));
+        sesion.setCantidadDia("1");
         sesion.setMinutosAcumulados("0");
-        sesion.setInicio("0");
-        sesion.setFin("0");
+        sesion.setInicio(calcularFechaHoraActual());
+        sesion.setFin(calcularFechaHoraActual());
         repoSesion.registrarSesion(sesion);
     }
     private String calcularFechaHoraActual(){
